@@ -361,7 +361,7 @@ function startDataSendingTimer() {
 
 // ---------------- START SERVER ----------------
 const PORT = config.server.port;
-server.listen(PORT, () => {
+server.listen(PORT, "0.0.0.0", () => {
   console.log(`🚀 Server running on http://localhost:${PORT}`);
   console.log(`📡 Ready to receive ESP8266 POST requests at /api/sensor`);
   startDataSendingTimer();
