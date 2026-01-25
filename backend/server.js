@@ -37,13 +37,15 @@ const app = express();
 const server = http.createServer(app);
 
 // ✅ Enable CORS for frontend React app
+app.use(cors({ origin: "*" }));
+
 const io = new SocketIo(server, {
   cors: {
-    origin: config.server.corsOrigin,
+    origin: "*",
     methods: ["GET", "POST"]
   }
 });
-app.use(cors());
+
 app.use(express.json()); // ✅ Parse JSON bodies
 
 // ---------------- STATE ----------------
@@ -360,9 +362,9 @@ function startDataSendingTimer() {
 }
 
 // ---------------- START SERVER ----------------
-const PORT = config.server.port;
+const PORT = process.env.PORT || config.server.port || 4000;
 server.listen(PORT, "0.0.0.0", () => {
-  console.log(`🚀 Server running on http://localhost:${PORT}`);
+  console.log(`🚀 Server running on ${PORT}`);
   console.log(`📡 Ready to receive ESP8266 POST requests at /api/sensor`);
   startDataSendingTimer();
 });
