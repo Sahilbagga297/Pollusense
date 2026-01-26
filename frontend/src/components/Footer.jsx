@@ -65,7 +65,7 @@ const Footer = () => {
     setSubscriptionStatus(null);
 
     try {
-      const response = await fetch('http://localhost:4000/api/newsletter', {
+      const response = await fetch('https://pollusense.onrender.com/api/newsletter', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
