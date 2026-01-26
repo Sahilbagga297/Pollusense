@@ -6,7 +6,7 @@ dotenv.config();
 
 export const config = {
   // Data sending configuration
-  dataSendInterval: process.env.DATA_SEND_INTERVAL || 1000, // milliseconds (0.5 updates per second - 2 second interval)
+  dataSendInterval: process.env.DATA_SEND_INTERVAL || 500, // milliseconds (0.5 updates per second - 2 second interval)
   
   // Serial port configuration
   serialPort: {
