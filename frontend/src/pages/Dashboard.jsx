@@ -37,7 +37,7 @@ const Dashboard = () => {
   });
 
   // Backend configuration
-  const API_BASE = "http://localhost:4000";
+  const API_BASE = import.meta.env.VITE_API_BASE || "https://pollusense.onrender.com";
 
   // Floating particles animation
   const Particles = () => (
@@ -309,8 +309,8 @@ const Dashboard = () => {
     responsive: true,
     maintainAspectRatio: false,
     animation: {
-      duration: 2000,
-      easing: 'easeInOutQuart'
+      duration: 200,
+      easing: 'easeOutQuart'
     },
     plugins: {
       legend: {
@@ -746,10 +746,10 @@ const Dashboard = () => {
               <div className="inline-flex items-center px-8 py-4 bg-gray-50 rounded-full border border-gray-200 shadow-md hover:shadow-lg transition-all duration-300">
                 <div
                   className={`w-3 h-3 rounded-full mr-4 ${connectionStatus === "connected"
-                      ? "bg-green-500 animate-pulse"
-                      : connectionStatus === "connecting"
-                        ? "bg-yellow-500 animate-spin"
-                        : "bg-red-500"
+                    ? "bg-green-500 animate-pulse"
+                    : connectionStatus === "connecting"
+                      ? "bg-yellow-500 animate-spin"
+                      : "bg-red-500"
                     }`}
                 />
                 <span className="text-gray-700 font-bold text-lg">
