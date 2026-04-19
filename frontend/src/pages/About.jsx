@@ -22,28 +22,24 @@ const About = () => {
   const teamMembers = [
     {
       name: "Sahil Bagga",
-      role: "Chief Technology Officer",
       expertise: "AI & Machine Learning",
       description: "Leading AI research with 15+ years in environmental tech"
     },
     {
-      name: "Shivam Sharma",
-      role: "Head of Engineering",
+      name: "Nirmal Todwal",
       expertise: "IoT Systems",
       description: "Expert in sensor networks and real-time data processing"
     },
-    // {
-    //   name: "Sanjay Singh",
-    //   role: "Environmental Scientist",
-    //   expertise: "Air Quality Research",
-    //   description: "Published researcher in atmospheric pollution modeling"
-    // },
-    // {
-    //   name: "Ritesh Pandey",
-    //   role: "Product Director",
-    //   expertise: "User Experience",
-    //   description: "Designing intuitive interfaces for complex data systems"
-    // }
+    {
+      name: "Sanjay Singh",
+      expertise: "Air Quality Research",
+      description: "Published researcher in atmospheric pollution modeling"
+    },
+    {
+      name: "Ronak Todwal",
+      expertise: "User Experience",
+      description: "Designing intuitive interfaces for complex data systems"
+    }
   ];
 
   const milestones = [

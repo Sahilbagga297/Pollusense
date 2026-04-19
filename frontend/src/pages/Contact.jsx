@@ -140,7 +140,7 @@ const Contact = () => {
     {
       icon: MapPin,
       title: "Address",
-      details: ["JECRC FOUNDATION", "Sitapura , Jaipur , 302004"],
+      details: ["Poornima College Of Engineering", "Sitapura , Jaipur , 302004"],
       gradientFrom: "from-purple-500",
       gradientTo: "to-purple-600",
       hoverBorder: "hover:border-purple-300"
